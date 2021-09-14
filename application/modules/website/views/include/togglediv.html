@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style type="text/css">
+        .select:hover {
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        ul li {
+            display: none;
+        }
+
+        ul li:before {
+            content: "- ";
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        window.onload = function () {
+
+            $(".select").click(function (e) {
+                $(".select").find('ul li').hide();
+                $(this).find('ul li').toggle();
+            });
+
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+
+
+    <div class="select" id="numbers">Select Box1
+        <ul>
+            <li>1234</li>
+            <li>5678</li>
+            <li>0123</li>
+        </ul>
+    </div>
+    <br><br>
+    <div class="select" id="letters">Select Box2
+        <ul>
+            <li>abcd</li>
+            <li>efgh</li>
+            <li>ijkl</li>
+        </ul>
+    </div>
+    <br><br>
+    <div class="select" id="fruits">Select Box3
+        <ul>
+            <li>apples</li>
+            <li>bananas</li>
+            <li>oranges</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
